@@ -4,7 +4,7 @@ Feeling lazy? Quickly run a script in place of manually adding/committing/pushin
 
 ## Overview
 
-I find that I'm often running the same set of Git commands when I'm updating a project and have nothing specific to put in the commit message for the changes I made:
+I find that I'm often running the same set of Git commands when I'm updating a(n unimportant) project and have nothing specific to put in the commit message(s) for the changes I made:
 
 ```powershell
 git add .
