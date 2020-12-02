@@ -46,4 +46,4 @@ This prompted me to want to spin up some really simple Git scripts for a few dif
 
 ## Owner
 
-Michael A. Agarenzo
+[Michael A. Agarenzo](https://magarenzo.com)
