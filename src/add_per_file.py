@@ -1,13 +1,13 @@
-from datetime import datetime
-#import subprocess
-
 # Feeling lazy? Quickly run a script in place of manually adding/committing/pushing
+
+from datetime import datetime
+import subprocess
 
 def current_time() -> str:
     now = datetime.now()
-    return str(now.strftime("%H:%M:%S"))
+    return now.strftime("%H:%M:%S")
 
-# TODO
+# TODO: Implement add_per_file()
 def add_per_file() -> None:
     print("TODO")
 
