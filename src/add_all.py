@@ -13,7 +13,7 @@ def add_all() -> None:
     project_name = basename(os.getcwd())
 
     subprocess.call(["git"] + ["add", "."])
-    subprocess.call(["git"] + ["commit", "-m \"Update " + project_name + "\""])
+    subprocess.call(["git"] + ["commit", "-m Update " + project_name])
     subprocess.call(["git"] + ["push"])
 
 # Driver
