@@ -14,9 +14,7 @@ def add_all() -> None:
 
     subprocess.call(["git"] + ["add", "."])
     subprocess.call(["git"] + ["commit", "-m \"Update " + project_name + "\""])
-    # subprocess.run("git add .")
-    # subprocess.run("git commit -m \"Update " + project_name + "\"")
-    # subprocess.run("git push")
+    subprocess.call(["git"] + ["push"])
 
 # Driver
 print(current_time() + " - STARTED - add_all.py")
