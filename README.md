@@ -14,34 +14,48 @@ git push
 
 This prompted me to want to spin up some really simple Git scripts for a few different scenarios I often find myself in
 
+Keep in mind that you may need to run the following to allow your current PowerShell session to run PowerShell scripts not digitally signed:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
 ## Running the Scripts
 
-1. Open a PowerShell session
+Run one of the following scripts from within the repo you are updating (it does not matter if the script itself is located in a different directory):
 
-2. Optionally run the following to allow the current session to run scripts not digitally signed:
+### Add All
 
-    ```powershell
-    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-    ```
+* Run either of the following to add all files, set a simple commit message pertaining to the repo name, and push:
 
-3. Run one of the following scripts from within the repo you are updating (it does not matter if the script itself is located in a different directory):
-
-### Add-All.ps1
-
-* Run the following to add all files, set a simple commit message pertaining to the repo name, and push:
+#### Add-All.ps1
 
 ```powershell
 .\Add-All.ps1
 ```
 
+#### add_all.py
+
+```python
+python add_all.py
+```
+
 ## TODO
 
-### Add-Per-File.ps1
+### Add Per File
 
-* Run the following to add all files, set a simple commit message per file pertaining to that file's name, and push:
+* Run either of the following to add all files, set a simple commit message per file pertaining to that file's name, and push:
+
+#### Add-Per-File.ps1
 
 ```powershell
 .\Add-Per-File.ps1
+```
+
+#### add_per_file.py
+
+```python
+python add_per_file.py
 ```
 
 ## Owner
