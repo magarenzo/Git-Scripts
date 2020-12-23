@@ -22,7 +22,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 ## Running the Scripts
 
-Run one of the following scripts from within the repo you are updating (it does not matter if the script itself is located in a different directory):
+Run one of the following scripts from within the root of the repo you are updating (it does not matter if the script itself is located in a different directory):
 
 ### Add All
 
