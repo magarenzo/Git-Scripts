@@ -5,10 +5,14 @@ import subprocess
 import os
 from os.path import basename
 
+# Return current_time
 def current_time() -> str:
     now = datetime.now()
     return now.strftime("%H:%M:%S")
 
+# Add all files
+# Set a simple commit message pertaining to the repo name
+# Push
 def add_all() -> None:
     project_name = basename(os.getcwd())
     commit_message = "-m Update " + project_name
