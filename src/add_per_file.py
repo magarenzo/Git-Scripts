@@ -10,7 +10,7 @@ def current_time() -> str:
     now = datetime.now()
     return now.strftime("%H:%M:%S")
 
-# Add all files one at a time
+# Add all files
 # Set a simple commit message per file pertaining to that file's name
 # Push
 def add_per_file() -> None:
@@ -23,7 +23,7 @@ def add_per_file() -> None:
         filepath = "./" + file
         subprocess.call(["git"] + ["commit", "-m", commit_message] + [filepath])
 
-    # subprocess.call(["git"] + ["push"])
+    subprocess.call(["git"] + ["push"])
 
 # Driver
 print(current_time() + " - STARTED - add_per_file.py")
