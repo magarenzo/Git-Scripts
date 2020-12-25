@@ -2,6 +2,8 @@
 
 from datetime import datetime
 import subprocess
+import os
+from os.path import basename
 
 # Return current_time
 def current_time() -> str:
@@ -12,8 +14,13 @@ def current_time() -> str:
 # Set a simple commit message per file pertaining to that file's name
 # Push
 def add_per_file() -> None:
-    print("TODO: Implement add_per_file()")
-
+    project_name = basename(os.getcwd())
+    subprocess.call(["git"] + ["add", "."])
+    file_list = subprocess.check_output(["git"] + ["diff"] + ["--cached"] + ["--name-only"], text=True).split('\n')[:-1]
+    for file in file_list:
+        commit_message = "Update " + file + " in " + project_name
+        filepath = "./" + file
+        subprocess.call(["git"] + ["commit"] + ["-m"] + [commit_message] + [filepath])
     subprocess.call(["git"] + ["push"])
 
 # Driver
