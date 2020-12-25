@@ -15,11 +15,11 @@ def current_time() -> str:
 # Push
 def add_all() -> None:
     project_name = basename(os.getcwd())
-    commit_message = "-m Update " + project_name
+    commit_message = "Update " + project_name
 
     subprocess.call(["git"] + ["add", "."])
-    subprocess.call(["git"] + ["commit", commit_message])
-    subprocess.call(["git"] + ["push"])
+    subprocess.call(["git"] + ["commit", "-m", commit_message])
+    # subprocess.call(["git"] + ["push"])
 
 # Driver
 print(current_time() + " - STARTED - add_all.py")

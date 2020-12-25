@@ -16,11 +16,13 @@ def current_time() -> str:
 def add_per_file() -> None:
     project_name = basename(os.getcwd())
     subprocess.call(["git"] + ["add", "."])
-    file_list = subprocess.check_output(["git"] + ["diff"] + ["--cached"] + ["--name-only"], text=True).split('\n')[:-1]
+
+    file_list = subprocess.check_output(["git"] + ["diff"] + ["--cached"] + ["--name-only"]).split("\n")[:-1]
     for file in file_list:
         commit_message = "Update " + file + " in " + project_name
         filepath = "./" + file
         subprocess.call(["git"] + ["commit"] + ["-m"] + [commit_message] + [filepath])
+        
     subprocess.call(["git"] + ["push"])
 
 # Driver
