@@ -17,8 +17,7 @@ def add_per_file() -> None:
     file_list = subprocess.check_output(["git"] + ["diff"] + ["--cached"] + ["--name-only"], text=True).split("\n")[:-1]
     for git_file in file_list:
         commit_message = "Update " + git_file
-        filepath = "./" + git_file
-        subprocess.call(["git"] + ["commit", "-m", commit_message] + [filepath])
+        subprocess.call(["git"] + ["commit", "-m", commit_message])
 
     subprocess.call(["git"] + ["push"])
 
