@@ -40,13 +40,11 @@ Run one of the following scripts from within the root of the repo you are updati
 python add_all.py
 ```
 
-## TODO
-
 ### Add Per File
 
-* Run either of the following to add all files one at a time, set a simple commit message per file pertaining to that file's name, and push:
+* Run either of the following to add all files, set a simple commit message per file pertaining to that file's name, and push:
 
-#### Add-Per-File.ps1
+#### TODO: Add-Per-File.ps1
 
 ```powershell
 .\Add-Per-File.ps1
