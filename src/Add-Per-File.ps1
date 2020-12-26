@@ -13,6 +13,7 @@ if ($FileCount -gt 1) {
         git commit -m $FileList[$GitFile]
     }
 } else {
+    Write-Output "this -> $FileList"
     git commit -m "Update $FileList"
 }
 
