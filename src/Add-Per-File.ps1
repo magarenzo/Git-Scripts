@@ -10,10 +10,10 @@ $FileList = git diff --cached --name-only
 $FileCount = $FileList.count
 if ($FileCount -gt 1) {
     for ($GitFile = 0; $GitFile -lt $FileCount; $GitFile++) {
+        Write-Output "these -> " + $FileList[$GitFile]
         git commit -m $FileList[$GitFile]
     }
 } else {
-    Write-Output "this -> $FileList"
     git commit -m "Update $FileList"
 }
 
