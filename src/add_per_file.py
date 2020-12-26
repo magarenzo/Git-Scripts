@@ -14,10 +14,11 @@ def current_time() -> str:
 def add_per_file() -> None:
     subprocess.call(["git"] + ["add", "."])
 
-    file_list = subprocess.check_output(["git"] + ["diff"] + ["--cached"] + ["--name-only"], text=True).split("\n")[:-1]
+    file_list = subprocess.check_output(["git"] + ["diff", "--cached", "--name-only"], text=True).split("\n")[:-1]
     for git_file in file_list:
         commit_message = "Update " + git_file
-        subprocess.call(["git"] + ["commit", "-m", commit_message])
+        file_path = "./" + git_file
+        subprocess.call(["git"] + ["commit", "-m", commit_message] + [file_path])
 
     subprocess.call(["git"] + ["push"])
 
