@@ -44,7 +44,7 @@ python add_all.py
 
 * Run either of the following to add all files, set a simple commit message per file pertaining to that file's name, and push:
 
-#### TODO: Add-Per-File.ps1
+#### Add-Per-File.ps1
 
 ```powershell
 .\Add-Per-File.ps1
