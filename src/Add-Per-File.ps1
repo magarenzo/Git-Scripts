@@ -9,7 +9,7 @@ git add .
 $FileList = git diff --cached --name-only
 if ($FileList.count -gt 1) {
     for ($GitFile = 0; $GitFile -lt $FileList.count; $GitFile++) {
-        git commit -m "Update $FileList[$GitFile]"
+        git commit -m "Update $($FileList[$GitFile])"
     }
 } else {
     git commit -m "Update $FileList"
