@@ -7,17 +7,15 @@ git add .
 
 # Set a simple commit message per file pertaining to that file's name
 $FileList = git diff --cached --name-only
-$FileCount = $FileList.count
-if ($FileCount -gt 1) {
-    for ($GitFile = 0; $GitFile -lt $FileCount; $GitFile++) {
-        Write-Output "Working -> $FileList[$GitFile]"
-        git commit -m "Update " $FileList[$GitFile]
+if ($FileList.count -gt 1) {
+    for ($GitFile = 0; $GitFile -lt $FileList.count; $GitFile++) {
+        git commit -m "Update $FileList[$GitFile]"
     }
 } else {
     git commit -m "Update $FileList"
 }
 
 # Push
-# git push
+git push
 
 Write-Output "$(Get-Date -Format 'HH:mm:ss') - COMPLETED - Add-Per-File.ps1"
