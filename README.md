@@ -58,4 +58,4 @@ python add_per_file.py
 
 ## Owner
 
-[Michael A. Agarenzo](https://magarenzo.com)
+[Michael A.](https://linkedin.com/in/magarenzo)
